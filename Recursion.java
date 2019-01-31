@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Recursion {
   public static double sqrt(double n, double tolerance) {
     return sqrtHelp(n, 1, tolerance);
@@ -25,6 +26,14 @@ public class Recursion {
     }
     return fibHelp(n, i + 1, partial, prev + partial);
   }
+  public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> L = new ArrayList<Integer>();
+    return L;
+  }
+  public static int ms(int n, int partial){
+    return partial;
+  }
+
   public static void main(String[] args) {
     System.out.println(sqrt(9.0, .000001));
     System.out.println(sqrt(2.0, .000001));
