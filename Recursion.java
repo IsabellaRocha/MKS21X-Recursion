@@ -13,14 +13,17 @@ public class Recursion {
       return sqrtHelp(n, (n/guess + guess) / 2, tolerance);
     }
   }
-  public static int fib(int n) {
-    return fibHelp(n, 0, 1);
-  }
-  public static int fibHelp(int n, int prev, int prev2) {
-    if (n == 1) {
-      return prev2;
+  public static long fib(long n) {
+    if (n == 0) {
+      return 0;
     }
-    return fibHelp(n, prev2, prev + prev2);
+    return fibHelp(n, 1, 0, 1);
+  }
+  public static long fibHelp(long n, long i, long prev, long partial) {
+    if (n == i) {
+      return partial;
+    }
+    return fibHelp(n, i + 1, partial, prev + partial);
   }
   public static void main(String[] args) {
     System.out.println(sqrt(9.0, .000001));
@@ -29,6 +32,13 @@ public class Recursion {
     System.out.println(sqrt(100, .000001));
     System.out.println(sqrt(101, .000001));
     System.out.println(sqrt(1124, .000001));
-    System.out.println(sqrt(0, .000001));
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(2));
+    System.out.println(fib(3));
+    System.out.println(fib(4));
+    System.out.println(fib(5));
+    System.out.println(fib(7));
+    System.out.println(fib(50));
   }
 }
