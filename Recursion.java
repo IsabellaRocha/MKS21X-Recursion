@@ -34,9 +34,10 @@ public class Recursion {
   public static void ms(int n, int partial, ArrayList<Integer> L){
     if (n == 0) {
       L.add(partial);
+    } else {
+      ms(n - 1, n + partial, L);
+      ms(n - 1, partial, L);
     }
-     ms(n - 1, n + partial, L);
-     ms(n - 1, partial, L);
   }
 
   public static void main(String[] args) {
@@ -54,5 +55,6 @@ public class Recursion {
     System.out.println(fib(5));
     System.out.println(fib(7));
     System.out.println(fib(50));
+    System.out.println(makeAllSums(3));
   }
 }
