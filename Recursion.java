@@ -55,6 +55,10 @@ public class Recursion {
     System.out.println(fib(5));
     System.out.println(fib(7));
     System.out.println(fib(50));
+    System.out.println(makeAllSums(2));
     System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(4));
+    System.out.println(makeAllSums(5));
+    System.out.println(makeAllSums(6));
   }
 }
