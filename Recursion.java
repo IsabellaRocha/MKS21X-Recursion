@@ -20,18 +20,23 @@ public class Recursion {
     }
     return fibHelp(n, 1, 0, 1);
   }
-  public static long fibHelp(long n, long i, long prev, long partial) {
+  public static long fibHelp(long n, long i, long prev, long prev2) {
     if (n == i) {
-      return partial;
+      return prev2;
     }
-    return fibHelp(n, i + 1, partial, prev + partial);
+    return fibHelp(n, i + 1, prev2, prev + prev2);
   }
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> L = new ArrayList<Integer>();
+    ms(n, 0, L);
     return L;
   }
-  public static int ms(int n, int partial){
-    return partial;
+  public static void ms(int n, int partial, ArrayList<Integer> L){
+    if (n == 0) {
+      L.add(partial);
+    }
+     ms(n - 1, n + partial, L);
+     ms(n - 1, partial, L);
   }
 
   public static void main(String[] args) {
