@@ -14,13 +14,13 @@ public class Recursion {
       return sqrtHelp(n, (n/guess + guess) / 2, tolerance);
     }
   }
-  public static long fib(long n) {
+  public static int fib(int n) {
     if (n == 0) {
       return 0;
     }
     return fibHelp(n, 1, 0, 1);
   }
-  public static long fibHelp(long n, long i, long prev, long prev2) {
+  public static int fibHelp(int n, int i, int prev, int prev2) {
     if (n == i) {
       return prev2;
     }
